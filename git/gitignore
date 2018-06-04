@@ -1,0 +1,46 @@
+# -*- mode: gitignore; -*-
+
+## Emacs
+# Temporary
+*~
+\#*\#
+.\#*
+
+# Compiled emacs lisp
+*.elc
+
+# Desktop
+/.emacs.desktop
+/.emacs.desktop.lock
+
+# Projectiles files
+.projectile
+
+# Directory configuration
+.dir-locals.el
+
+## Vim
+# Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+
+# Session
+Session.vim
+
+# Temporary
+.netrwhist
+*~
+
+# Auto-generated tag files 
+tags
+
+# Persistent undo
+[._]*.un~
+
+## Ninja
+.ninja_deps
+.ninja_log
+
+

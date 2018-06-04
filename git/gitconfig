@@ -4,7 +4,7 @@
 [push]
 	default = matching
 [core]
-	excludesfile = /home/erreina/.dotfiles/.gitignore
+	excludesfile = /home/erreina/.dotfiles/git/gitignore
 [color]
     ui = auto
 [alias]
