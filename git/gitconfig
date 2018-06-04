@@ -1,0 +1,31 @@
+[user]
+	name = Ernesto Rodriguez Reina
+	email = erreina@gmail.com
+[push]
+	default = matching
+[core]
+	excludesfile = /home/erreina/.dotfiles/.gitignore
+[color]
+    ui = auto
+[alias]
+    a = add
+	c = commit
+    ca = commit -a
+    cm = commit -m
+    cam = commit -a -m
+	co = checkout
+	br = checkout -b
+	bd = branch -d
+	bD = branch -D
+	ba = branch -a
+	s = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	l = log
+	d = diff
+	pl = pull
+	ps = push
+	pst = push --tags
+    t = tag
+    m = merge --no-ff --no-commit
+    subup = submodule update --init --recursive
