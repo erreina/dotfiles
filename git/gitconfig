@@ -5,6 +5,7 @@
 	default = matching
 [core]
 	excludesfile = /home/erreina/.dotfiles/git/gitignore
+	editor = emacsclient
 [color]
     ui = auto
 [alias]
