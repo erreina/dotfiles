@@ -43,4 +43,8 @@ tags
 .ninja_deps
 .ninja_log
 
+# CQuery
+.cquery_cached_index
 
+# Compile commands
+compile_commands.json
