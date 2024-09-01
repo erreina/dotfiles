@@ -26,5 +26,14 @@ config.window_padding = {
 	bottom = 0,
 }
 
+config.keys = {
+	-- Turn off the default CTRL-L Debug overlay
+	{
+		key = "L",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.DisableDefaultAssignment,
+	},
+}
+
 -- and finally, return the configuration to wezterm
 return config
