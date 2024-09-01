@@ -83,7 +83,10 @@ plugins=(zoxide # Sets 'z' for zoxide
 
 source $ZSH/oh-my-zsh.sh
 source $ZSH_PLUGINS/zaw/zaw.zsh
+source $ZSH_PLUGINS/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+
+# My Keybindings
 source $HOME/.dotfiles/zsh/my-zle.zsh
 
 # this most be the last pluging sourced
