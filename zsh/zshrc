@@ -4,6 +4,9 @@ export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.dotfiles/zsh/oh-my-zsh"
 
+# Path to the ZSH plugings directory
+ZSH_PLUGINS="$HOME/.dotfiles/zsh/plugins"
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -73,6 +76,7 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 plugins=(zoxide)
 
 source $ZSH/oh-my-zsh.sh
+source $ZSH_PLUGINS/zaw/zaw.zsh
 
 # User configuration
 
