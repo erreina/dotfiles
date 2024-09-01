@@ -74,8 +74,10 @@ ZSH_CUSTOM=$HOME/.dotfiles/zsh/oh-my-zsh-custom
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zoxide
-	sudo)
+plugins=(zoxide # Sets 'z' for zoxide
+	last-working-dir # Keeps track of the last used working directory and automatically jumps into it for new shells
+	sudo # Esc Esc uses sudo for the last command
+)
 
 source $ZSH/oh-my-zsh.sh
 source $ZSH_PLUGINS/zaw/zaw.zsh
