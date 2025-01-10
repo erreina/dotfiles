@@ -6,15 +6,15 @@ return {
 
     conform.setup({
       formatters_by_ft = {
-        html = { "prettier" },
-        json = { "prettier" },
-        yaml = { "prettier" },
-        markdown = { "prettier" },
-        lua = { "stylua" },
-        python = { "isort", "black" },
+        -- html = { "prettier" },
+        -- json = { "prettier" },
+        -- yaml = { "prettier" },
+        -- markdown = { "prettier" },
+        -- lua = { "stylua" },
+        -- python = { "isort", "black" },
         rust = {"rustfmt", lsp_format = "fallback"},
-        cpp = {"clang_format"},
-        c = {"clang_format"},
+      --   cpp = {"clang_format"},
+      --   c = {"clang_format"},
       },
       format_on_save = {
         lsp_fallback = true,

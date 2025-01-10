@@ -25,6 +25,20 @@ keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" }) 
 keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" }) -- make split windows equal width & height
 keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split window
 
+local function close_other_windows()
+  local current_win = vim.api.nvim_get_current_win()
+  local wins = vim.api.nvim_list_wins()
+
+  for _, win in ipairs(wins) do
+    if win ~= current_win then
+      vim.api.nvim_win_close(win, false)
+    end
+  end
+end
+vim.api.nvim_create_user_command("CloseOtherWindows", close_other_windows, {})
+keymap.set("n", "<leader>so", "<cmd>CloseOtherWindows<CR>", {desc = "Close other windows"})
+
+-- tab management
 keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
 keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab

@@ -5,4 +5,5 @@ return {
   opts = {
     indent = { char = "┊" },
   },
+  version = "3.5.4",
 }
