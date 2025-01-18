@@ -8,6 +8,7 @@ return {
     "nvim-telescope/telescope-file-browser.nvim",
     "nvim-tree/nvim-web-devicons",
     "folke/todo-comments.nvim",
+    "folke/trouble.nvim",
   },
   config = function()
     local telescope = require("telescope")
@@ -22,22 +23,32 @@ return {
             ["<C-j>"] = actions.preview_scrolling_down,
             ["<C-h>"] = actions.preview_scrolling_left,
             ["<C-l>"] = actions.preview_scrolling_right,
-            
+
             ["<M-k>"] = actions.results_scrolling_up,
             ["<M-j>"] = actions.results_scrolling_down,
             ["<M-h>"] = actions.results_scrolling_left,
             ["<M-l>"] = actions.results_scrolling_right,
+
+            ["<C-q>"] = function(prompt_bufnr)
+              actions.smart_send_to_qflist(prompt_bufnr)
+              vim.cmd("Trouble quickfix")
+            end
           },
           n = {
             ["<C-k>"] = actions.preview_scrolling_up,
             ["<C-j>"] = actions.preview_scrolling_down,
             ["<C-h>"] = actions.preview_scrolling_left,
             ["<C-l>"] = actions.preview_scrolling_right,
-            
+
             ["<M-k>"] = actions.results_scrolling_up,
             ["<M-j>"] = actions.results_scrolling_down,
             ["<M-h>"] = actions.results_scrolling_left,
             ["<M-l>"] = actions.results_scrolling_right,
+
+            ["<C-q>"] = function(prompt_bufnr)
+              actions.smart_send_to_qflist(prompt_bufnr)
+              vim.cmd("Trouble quickfix")
+            end
           },
         },
       },
@@ -57,9 +68,9 @@ return {
       },
       extensions = {
         file_browser = {
-          hijack_netrw = true, 
+          hijack_netrw = true,
         },
-      }, 
+      },
     })
 
     telescope.load_extension("fzf")
@@ -76,7 +87,8 @@ return {
     keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Fuzzy find open buffers" })
     keymap.set("n", "<leader>fo", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
     keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
-    keymap.set("n", "<leader>fg", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>", { desc = "Live grep with args in cwd" })
+    keymap.set("n", "<leader>fg", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>",
+      { desc = "Live grep with args in cwd" })
     keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
     keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
   end,
