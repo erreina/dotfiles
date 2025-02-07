@@ -78,7 +78,14 @@ plugins=(zoxide # Sets 'z' for zoxide
 	colored-man-pages
 	dotenv # Automatically load the .env file when you cd into a directory
 	last-working-dir # Keeps track of the last used working directory and automatically jumps into it for new shells
-	sudo # Esc Esc uses sudo for the last command
+  eza
+  bazel
+  fzf
+  poetry-env
+  rust
+  ssh
+  thefuck
+  tldr
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -117,5 +124,3 @@ export EDITOR='nvim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-
-eval $(thefuck --alias)
