@@ -1,0 +1,47 @@
+[core]
+  editor = nvim
+  autocrtlf = false
+  pager = delta
+
+[interactive]
+  diffFilter = delta --color-only
+
+[push]
+  default = simple
+
+[delta]
+  navigate = true
+  side-by-side = true
+
+[merge]
+  conflictstyle = zdiff3
+
+[diff]
+  colorMoved = default
+
+[color]
+  ui = auto
+
+[alias]
+  a = add
+  c = commit
+  ca = commit -a
+  cm = commit -m
+  cam = commit -a -m
+  co = checkout
+  br = checkout -b
+  bd = branch -d
+  bD = branch -D
+  ba = branch -a
+  s = status
+  unstage = reset HEAD --
+  last = log -1 HEAD
+  l = log
+  lo = log --oneline
+  d = diff
+  pl = pull
+  ps = push
+  pst = push --tags
+  m = merge --no-ff --no-commit
+  subup = submodule update --init --recursive
+  dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%ar%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
